@@ -1,0 +1,1850 @@
+/* Custom Fonts (Example - you would need the actual font from the image) */
+/* @import url('...'); */
+
+/* Global Styling for Arabic Text */
+body {
+    font-family: 'Arial', sans-serif; /* Replace with actual font */
+    direction: rtl; /* Right-to-Left for Arabic */
+    text-align: right;
+}
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px; /* Adjust spacing for RTL */
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.logo {
+    height: 65px; /* Adjust as needed */
+    margin-left: 5px;
+}
+
+
+/* --- Hero Section Styling --- */
+#hero {
+    /* Set the background image and its properties */
+    background: url('img/bg.jpg') center center;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* For the overlay */
+}
+
+/* Dark overlay to ensure text readability */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark shade with 40% opacity */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Text styles */
+#hero h1 {
+    font-weight: 700;
+    /* Adjust font size for responsiveness via Bootstrap's display-3 class */
+}
+
+#hero .lead {
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Custom CTA Button Styling */
+.custom-btn {
+    background-color: #C73453; /* Red/Pink color from the image */
+    border: 1px solid #C73453;
+    padding: 10px 40px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #a32b45; /* Slightly darker shade on hover */
+    border: 1px solid #a32b45;
+}
+
+/* --- Responsiveness: Adjustments for smaller screens --- */
+@media (max-width: 992px) {
+    /* Adjustments for the mobile menu */
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9); /* Opaque background for mobile menu */
+        padding: 15px;
+    }
+    .nav-link {
+        margin-left: 0;
+        text-align: right;
+    }
+}
+
+/* Sections 2 */
+
+/* --- Custom Arabic/RTL Styling --- */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.me-3 { /* Bootstrap utility for margin-end (right margin in RTL) */
+    margin-right: 1rem !important; 
+    margin-left: 0 !important;
+}
+
+/* --- Section Styling --- */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.ml{
+    margin-right: 20px;
+}
+
+.section-subtitle {
+    letter-spacing: 2px;
+}
+
+/* Image Container for consistent padding/shadow */
+.image-container {
+    overflow: hidden;
+    border-radius: 8px; /* Slight rounding for images */
+}
+
+/* Sensory List Styling (تجربة الهدوء) */
+.sensory-list i {
+    color: #C73453; /* Using the custom red/pink color from the header if desired */
+    /* Alternatively, keep it muted as in the image: */
+    /* color: #aaa; */
+    flex-shrink: 0; /* Prevents icon from shrinking on mobile */
+    margin-top: 5px; /* Vertical alignment fix */
+}
+
+.sensory-list h5 {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.sensory-list .small {
+    font-size: 0.9rem;
+}
+
+/* Divider for Bonsai Philosophy Section */
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #C73453; /* Red line */
+    margin-right: auto; /* Aligns to the right in RTL */
+    margin-left: unset;
+}
+
+/* Sections-03 */
+/* --- Global RTL Setup for Section --- */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Background Color (matching the image's light, off-white background) */
+.bg-light-brown {
+    background-color: #fcfbf8; 
+}
+
+/* --- Header Styling --- */
+.section-subheading {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.section-title-investment {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* --- Card Styling --- */
+.investment-card {
+    border: 1px solid #eee; /* Very subtle border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); /* Light shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for interactivity */
+.investment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.investment-card .card-body {
+    padding: 20px;
+}
+
+.investment-card .card-text {
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.card-footer-text {
+    color: #a32b45; /* Darker version of the primary red */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Icon Box Styling */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #C73453; /* Red border */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box i {
+    color: #C73453; /* Red icon color */
+    font-size: 1.5rem !important;
+}
+
+/* --- Call to Action Button --- */
+.btn-outline-custom-red {
+    color: #C73453;
+    border-color: #C73453;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline-custom-red:hover {
+    background-color: #C73453;
+    color: #fff;
+    border-color: #C73453;
+}
+
+/* --- Responsiveness (Optional: Adjusting spacing on small screens) --- */
+@media (max-width: 767.98px) {
+    .section-title-investment {
+        font-size: 2rem;
+    }
+    .investment-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Sections -04 */
+
+/* --- Global RTL Setup for Section --- */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Background Color (matching the image's light, slightly textured background) */
+.bg-white-soft {
+    background-color: #f8f8f8;
+}
+
+.text-red {
+    color: #C73453; /* Primary brand color */
+}
+
+.section-title-payment {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* --- Top Section Styling --- */
+
+/* Cash Payment Box (Left Text) */
+.cash-payment-box {
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 100%; /* Ensure it matches the height of the image column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Payment Image Container */
+.payment-image-container img {
+    border-radius: 8px;
+}
+
+/* --- Table Styling --- */
+.payment-table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners cut off borders */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.payment-table thead th {
+    font-weight: 600;
+    color: #888 !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.payment-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.payment-table tbody td {
+    font-weight: 500;
+    color: #555;
+    padding: 12px 8px;
+}
+
+/* Completion Note */
+.completion-note {
+    background-color: #fefefe;
+    border: 1px solid #f0e68c; /* Subtle light yellow border */
+    color: #8b8000;
+    width: 90%;
+    max-width: 500px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+/* --- Feature Blocks Styling --- */
+.feature-card {
+    /* Optional: subtle background for the cards */
+    /* background-color: #fff; */
+    border-radius: 8px;
+}
+
+.feature-icon {
+    color: #C73453; /* Red icon color */
+    background-color: #fce7eb; /* Very light pink/red background for the circle */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.feature-icon i {
+    font-size: 1.5rem !important;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 767.98px) {
+    .section-title-payment {
+        font-size: 2rem;
+    }
+    .cash-payment-box {
+        margin-bottom: 20px;
+    }
+    .payment-table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Sections -05 */
+/* --- Video Section Styling --- */
+
+#video-section {
+    padding: 0;
+    height: 70vh; /* Adjust height as needed, 70vh is a good screen proportion */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Set the uploaded image as the background */
+    background: url('img/unnamed-3-1.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Overlay for Readability */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* Darker overlay for high contrast */
+    z-index: 1;
+}
+
+.video-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 80%;
+    max-width: 1100px;
+    text-align: right; /* Default alignment */
+    /* Position the content based on the original image */
+    align-self: flex-start; /* Align content to the top */
+    padding-top: 5%; 
+    padding-right: 5%; /* Adjust for RTL positioning */
+}
+
+/* --- Content Elements --- */
+.video-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Small line separator under title */
+.video-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #fff;
+    margin-right: 0; /* Aligns to right in RTL */
+    margin-top: 10px;
+}
+
+.video-description-box {
+    position: absolute;
+    bottom: 5%; /* Position near the bottom edge */
+    right: 5%; /* Position to the right edge in RTL */
+    max-width: 400px;
+}
+
+.description-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+
+/* --- Play Button Styling --- */
+.play-button-wrapper {
+    /* Center the play button relative to the content area (not the container) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #C73453; /* Primary red color */
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+/* --- Modal Styling --- */
+/* Remove default Bootstrap padding on the modal body */
+.modal-body .embed-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.modal-body .embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+    #video-section {
+        height: 60vh;
+    }
+    .video-content {
+        padding-top: 10%;
+        padding-right: 5%;
+    }
+    .play-button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .description-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Sections-06 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.section-divider {
+    border-top: 1px solid #ddd;
+    opacity: 0.5;
+}
+
+/* --- Video Block Styling --- */
+.video-placeholder-box {
+    position: relative;
+    width: 100%;
+    padding-top: 60%; /* Aspect Ratio 16:10 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-overlay-small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Light overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.play-button-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #C73453; 
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+
+.video-caption {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* --- Investment Case Section Styling --- */
+
+/* Parent container for the two overlapping blocks */
+.investment-image-group {
+    position: relative;
+    height: 400px; /* Fixed height for visual structure */
+}
+
+/* Wood Slice Box (Left/Top part) */
+.wood-slice-box {
+    position: absolute;
+    top: 0;
+    left: 0; /* Align to the right in RTL parent */
+    width: 60%;
+    height: 80%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wood-slice-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Transformation to position and crop the slice */
+    transform: translateX(10%); 
+}
+
+/* Green Concentric Box (Right/Bottom part) */
+.green-concentric-box {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Align to the left in RTL parent */
+    width: 70%;
+    height: 90%;
+    background-color: ; /* Dark green placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* Icon Features */
+.icon-features {
+    padding-top: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #C73453; /* Red border */
+    border-radius: 50%;
+}
+
+.icon-circle i {
+    color: #C73453; /* Red icon */
+    font-size: 1rem;
+}
+
+.feature-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 991.98px) {
+    /* Stack investment blocks vertically */
+    .investment-image-group {
+        height: 350px; /* Reduced height on smaller screens */
+        margin-bottom: 40px;
+    }
+    .green-concentric-box {
+        width: 65%;
+        font-size: 1.2rem;
+    }
+    .wood-slice-box {
+        width: 65%;
+    }
+    /* Center the stacked features */
+    .icon-features {
+        text-align: center;
+    }
+    .col-6 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Sections-07 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8; /* Soft background color */
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.section-title-designer {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* --- Tab Button Styling --- */
+.btn-tab {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #C73453; /* Outline button with brand color */
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-tab:hover {
+    background-color: #fce7eb; /* Light hover background */
+    color: #C73453;
+}
+
+.btn-tab.active {
+    background-color: #C73453; /* Solid fill for active tab */
+    color: #fff;
+    border-color: #C73453;
+}
+
+/* --- Tab Content Styling --- */
+.text-content {
+    padding: 20px;
+}
+
+.content-title-copper {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #C73453; /* Highlight title with brand color */
+}
+
+.content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333; 
+}
+
+.content-description {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Image Showcase Styling */
+.image-showcase img {
+    /* Optional: To make the image groups slightly cleaner, you might size them */
+    /* If the images are different proportions, this maintains space: */
+    width: 100%;
+    height: 350px; /* Example fixed height */
+    object-fit: cover;
+}
+
+/* Specific styling for the Copper Touch images to mimic the stacked look */
+#copper-content .image-showcase img:first-child {
+    /* The first image (texture) seems to be cropped/positioned differently */
+    height: 300px;
+}
+#copper-content .image-showcase img:last-child {
+    height: 400px; /* Taller image for the interior detail */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 767.98px) {
+    .btn-tab {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .image-showcase img {
+        height: 250px; /* Reduce image height on mobile */
+    }
+    .text-content {
+        text-align: center;
+    }
+    .image-showcase {
+        margin-bottom: 20px;
+    }
+}
+
+/* Sections-08 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8; /* Consistent soft background */
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* --- Header Styling --- */
+.section-subheading-gallery {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #a32b45; /* Soft brand color */
+}
+
+.section-title-gallery {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* --- Gallery Grid Styling --- */
+.gallery-grid {
+    /* Use Bootstrap's g-3 for gutter spacing */
+}
+
+.gallery-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px; /* Match existing style */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-img {
+    width: 100%;
+    /* Maintain a consistent aspect ratio for most images */
+    height: 250px; 
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+/* Specific height adjustment for the smaller tiles in the middle section */
+.gallery-img.height-medium {
+    height: 200px;
+}
+
+/* Customizing the last, wider image for a clean finish on desktop */
+.col-lg-6 .gallery-img {
+    height: 300px; /* Slightly taller for visual weight */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 991.98px) {
+    .gallery-img {
+        height: 200px; 
+    }
+    .gallery-img.height-medium {
+        height: 180px;
+    }
+    .col-lg-6 .gallery-img {
+        height: 250px; 
+    }
+}
+@media (max-width: 767.98px) {
+    /* Stack two images per row on small tablets/phones */
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-md-6:nth-child(even) {
+        /* Ensures correct wrapping if needed */
+        margin-right: 0; 
+    }
+    .gallery-img, .gallery-img.height-medium, .col-lg-6 .gallery-img {
+        height: 150px;
+    }
+}
+/* Sections-09 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8; /* Soft background color from previous sections */
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* --- Header Styling --- */
+.section-title-team {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.team-description {
+    line-height: 1.8;
+}
+
+/* --- Partner Grid Styling --- */
+.partner-grid {
+    border-top: 1px solid #ddd; /* Separator line above the grid */
+    padding-top: 40px;
+}
+
+.partner-column {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* Center text content within each column */
+    text-align: center; 
+}
+
+/* Role Text (Japanese Architect, Developer, etc.) */
+.partner-role {
+    color: #a32b45; /* Soft brand color for the role */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Logo and Name Box */
+.logo-box {
+    min-height: 100px; /* Ensure consistent vertical space for alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logo {
+    max-height: 40px; /* Control max height of logos */
+    width: auto;
+    margin-bottom: 5px;
+    filter: grayscale(100%); /* Optional: Make logos grayscale like in the image */
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.partner-logo:hover {
+    filter: none; /* Colorize logo on hover */
+    opacity: 1;
+}
+
+.partner-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 767.98px) {
+    .partner-column {
+        /* On mobile, use 2 columns (col-6) and add bottom margin for stacking clarity */
+        margin-bottom: 20px;
+    }
+    .partner-role {
+        font-size: 0.8rem;
+    }
+    .partner-logo {
+        max-height: 30px;
+    }
+}
+
+/* Sections-10 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8; /* Consistent soft background */
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* --- Text Content Styling --- */
+.section-title-architect {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.architect-bio {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* --- Image and Graphic Styling --- */
+.architect-image-container {
+    position: relative;
+    width: 100%;
+    /* Ensure a fixed height to contain the absolute elements */
+    height: 500px; 
+}
+
+/* Architect Portrait */
+.architect-portrait {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    /* Position the image slightly off-center inside the container */
+    right: 20px; 
+    top: 0;
+    z-index: 2;
+    filter: grayscale(100%); /* Apply black and white filter */
+}
+
+/* Swirl Graphic (Simulated with a large off-white circle/shape) */
+.swirl-graphic {
+    position: absolute;
+    width: 650px; /* Large size to fill the background */
+    height: 650px;
+    /* Simulate the textured, light-colored circular background */
+    background-color: #f0ede7; 
+    border-radius: 50%;
+    
+    /* Position and transform to align with the image */
+    right: -100px; 
+    top: -100px;
+    
+    /* Optional: Add a subtle inner shadow or texture via CSS/SVG/image */
+    /* Example: background-image: url('swirl-texture.png'); */
+    z-index: 1;
+}
+
+/* Name Overlay (Vertical text on the left in the original image) */
+.architect-name-overlay {
+    position: absolute;
+    /* Rotate for vertical appearance */
+    transform: rotate(90deg); 
+    
+    /* Position to the left of the container (or further left to hang off) */
+    right: 100%;
+    top: 50%; 
+    transform-origin: top left;
+    
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 5px;
+    z-index: 3;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 991.98px) {
+    .architect-image-container {
+        height: 400px; /* Reduced height on medium screens */
+        margin-bottom: 30px;
+    }
+    .swirl-graphic {
+        width: 500px; 
+        height: 500px;
+        right: -50px; 
+        top: -50px;
+    }
+    .architect-portrait {
+        right: 0; 
+    }
+    .architect-name-overlay {
+        /* Move name closer to the image on smaller screens */
+        right: 90%; 
+    }
+}
+
+@media (max-width: 767.98px) {
+    .architect-image-container {
+        height: 350px; /* Reduced height on mobile */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
+    }
+    .architect-portrait {
+        height: 90%;
+        /* Center portrait on mobile */
+        right: 50%; 
+        transform: translateX(50%);
+    }
+    .swirl-graphic {
+        /* Center swirl graphic on mobile */
+        right: 50%; 
+        transform: translateX(50%);
+        width: 350px;
+        height: 350px;
+    }
+    .architect-name-overlay {
+        /* Hide or move the vertical text on mobile */
+        display: none; 
+    }
+    .text-right {
+        text-align: center !important;
+    }
+}
+
+/* Sections-11 */
+
+/* --- Global & Background --- */
+.bg-white-soft {
+    background-color: #f8f8f8; /* Consistent soft background */
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* --- Header Styling --- */
+.section-title-showcase {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.section-subtitle-showcase {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* --- Image Showcase Styling --- */
+
+/* Wrapper ensures the image spans the full width of the screen */
+.showcase-image-wrapper {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.showcase-image {
+    display: block;
+    /* Control the maximum height to maintain a cinematic wide aspect ratio */
+    max-height: 70vh; 
+    object-fit: cover;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 767.98px) {
+    .section-title-showcase {
+        font-size: 2rem;
+    }
+    .showcase-image {
+        max-height: 50vh; /* Shorter image on mobile */
+    }
+}
+
+/* Sections-12 */
+
+/* Custom CSS for the "تصميم صادق" Section */
+
+/* 1. Overall Section Styling */
+.honest-design-section {
+    background-color: #fcfcfc; /* Light off-white background matching the image */
+    color: #444; /* General dark grey text */
+}
+
+/* 2. Header and Introduction Text */
+.section-main-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    font-size: 1rem;
+    max-width: 850px;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+}
+
+/* 3. Feature Blocks Styling */
+.feature-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Specific alignment for the second text block ("الحرفية") to align to the end (left side in RTL) */
+.text-block-rtl-end {
+    text-align: end; 
+}
+
+/* 4. Image Placeholder Styling */
+.image-placeholder {
+    /* Simulate the image appearance */
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    /* Optional: Ensure image is full width and height within the column */
+    width: 100%;
+    height: 100%;
+    min-height: 280px; /* Minimum height for visibility */
+}
+
+/* 5. Section Footer */
+.section-footer-text {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* 6. Responsiveness: Adjustments for mobile screens */
+@media (max-width: 767.98px) {
+    /* Reset text alignment on small screens for better readability */
+    .text-block-rtl-end {
+        text-align: start; /* Revert to start alignment on mobile */
+    }
+
+    .feature-title {
+        margin-top: 1rem; /* Add space between image and title on stack */
+    }
+    
+    /* Ensure image and text stacking order is natural on mobile */
+    .image-col, .text-col {
+        order: unset !important;
+    }
+}
+
+/* Secions 13 */
+
+/* Custom CSS for the "نادي" Section Design */
+
+/* 1. General Section Styling */
+.nadi-section {
+    background-color: #fff; /* Assuming a white or very light background */
+    color: #444; 
+}
+
+.section-title-nadi {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+/* 2. Image and Overlay Styling (For Tea Room & Gardens) */
+.image-wrapper {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd; /* Placeholder background */
+    overflow: hidden;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Dark gradient from bottom, matching the image */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+    color: #fff;
+    text-align: right; /* RTL alignment */
+}
+
+.text-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.text-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* 3. Caption Styling (For Cinema, Library, Co-working, Recreation) */
+.caption-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.caption-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* 4. Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .text-overlay {
+        padding: 1rem;
+    }
+    
+    .text-overlay h3, .caption-title {
+        font-size: 1.3rem;
+    }
+
+    .text-overlay p, .caption-body {
+        font-size: 0.9rem;
+    }
+}
+
+/* Sections-14 */
+
+/* Custom CSS for the "واحة من الصفاء" Section Design */
+
+/* 1. General Section Styling */
+.oasis-section {
+    /* Background color from the image (a light beige/off-white) */
+    background-color: #f7f1e9; 
+    color: #444; 
+}
+
+/* 2. Header and Introduction Text */
+.section-title-oasis {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.section-intro-oasis {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 800px; /* Constrain width to match the visual look */
+    margin-bottom: 2rem;
+}
+
+/* 3. Image Grid Styling */
+.image-box {
+    /* Ensures the image box takes up space and is visible */
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    /* Optional: Slight border to mimic the original's visual separation */
+    border: 1px solid #e0d9d0;
+}
+
+/* Custom Alignment to Create the Asymmetric Staggered Look */
+
+/* The rightmost column (4 images) is naturally top-aligned (default flex-start) */
+
+/* The middle column (3 images) needs no specific vertical alignment, stays flex-start (default) */
+
+/* The leftmost column (3 images: fountain, table, billiards) needs to align to the bottom
+   to push the images up and create the staggered look relative to the column next to it. */
+.col-md-4.d-flex.flex-column {
+    /* We use Bootstrap's d-flex flex-column and justify-content-end classes 
+       in the HTML to handle the vertical alignment. */
+}
+
+
+/* 4. Responsiveness: Adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    /* On small screens, stack all columns, and revert alignment to standard top-alignment */
+    .image-box {
+        /* Ensure aspect ratios stack nicely */
+        margin-bottom: 1rem !important;
+    }
+    
+    .row.g-3 > div {
+        /* Reset vertical alignment on mobile */
+        justify-content: flex-start !important;
+        align-items: center !important;
+        width: 100%; /* Each item takes full width on mobile */
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Override the large-screen column classes to ensure full-width stacking */
+    .col-4.col-sm-3.col-md-3, .col-4.col-sm-3.col-md-4 {
+        width: 90% !important;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Locations */
+
+/* Custom CSS for the Location Section Design */
+
+/* 1. Overall Section Styling (Dark Background) */
+.location-section {
+    background-color: #333; /* Dark charcoal grey background */
+    color: #fff; /* Light text color for contrast */
+}
+
+/* 2. Header and Intro Text */
+.section-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ccc; /* Slightly lighter subtitle */
+    margin-bottom: 0.5rem;
+}
+
+.section-title-location {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.section-intro-location {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #ccc;
+    max-width: 90%; /* Keeps text clean and readable */
+}
+
+/* 3. Near Me Block */
+.pink-icon {
+    color: #ff3366; /* Bright pink/red color for the icon */
+    font-size: 1.5rem;
+}
+
+.near-me-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.near-me-description {
+    font-size: 0.9rem;
+    color: #ccc;
+    max-width: 90%;
+}
+
+/* 4. Feature Grid (2x2 Boxes) */
+.feature-box {
+    background-color: #444; /* Slightly lighter box background for separation */
+    padding: 1rem;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.feature-name {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #ccc;
+    margin-bottom: 0.2rem;
+}
+
+.feature-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/* 5. Map Container */
+.map-container {
+    background-color: rgb(245, 241, 241);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    /* Ensures the iframe is responsive */
+    width: 100%;
+    height: 100%;
+    min-height: 400px; /* Ensure visibility on large screens */
+}
+
+/* 6. Responsiveness: Adjustments for mobile screens */
+@media (max-width: 767.98px) {
+    .section-title-location {
+        font-size: 2rem;
+    }
+    
+    .map-col {
+        /* Add some margin when stacked on top of the details */
+        margin-top: 2rem;
+    }
+
+    .map-container iframe {
+        min-height: 300px;
+    }
+}
+
+/* Footer section */
+
+/* Custom CSS for the Footer/CTA Section */
+
+/* 1. Overall Footer and Background */
+.main-footer {
+    /* Set dark overlay over the background image */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), /* Dark overlay */
+        url('img/gpg1.jpg') no-repeat center center; /* Placeholder for background image */
+    background-size: cover;
+    color: #fff;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: right; /* RTL alignment */
+}
+
+/* 2. Call to Action (CTA) Block */
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    background-color: #e04e76; /* Bright pink/red button color */
+    border-color: #e04e76;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #c43c61;
+    border-color: #c43c61;
+    color: #fff;
+}
+
+/* 3. Main Footer Links and Info */
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e04e76; /* Pink color for headings */
+    margin-bottom: 1.5rem;
+}
+
+.list-unstyled li a, 
+.contact-info li a, 
+.contact-info li p {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 2.2;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.list-unstyled li a:hover, 
+.contact-info li a:hover {
+    color: #fff;
+}
+
+/* Logo Area */
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background: url('logo-icon.png') no-repeat center center; /* Placeholder for logo icon */
+    background-size: contain;
+    border: 2px solid #fff; /* Simulate the white circle/icon border */
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.logo-slogan {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* Social Icons */
+.social-link {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 1rem; /* Spacing between icons */
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #e04e76;
+}
+
+/* 4. Copyright Row */
+.copyright-row {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.copyright-text p,
+.privacy-links a {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.privacy-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .main-footer {
+        text-align: center;
+    }
+    
+    .logo-area, .quick-links, .contact-info, .social-icons {
+        text-align: center;
+        padding-inline-start: 0; /* Remove default list padding */
+    }
+
+    .social-icons {
+        /* Adjust spacing for centered icons */
+        margin-top: 1rem;
+    }
+    .social-link {
+        margin: 0 0.5rem;
+    }
+
+    .copyright-text {
+        text-align: center;
+    }
+    .privacy-links {
+        text-align: center !important;
+    }
+}
+
+
+/* --- BASE STYLES --- */
+.metro-proximity-section {
+    padding: 30px 5vw; /* Responsive padding */
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* --- HEADER --- */
+.header-content {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 300;
+    color: #333;
+}
+
+/* --- MAP CONTAINER (The responsiveness magic) --- */
+.map-container {
+    /* The 100% width ensures it fills the available space */
+    width: 100%;
+    
+    /* ASPECT RATIO TRICK: Sets the height as a percentage of the width (e.g., 600/1000 = 60%) */
+    /* This ensures the map maintains its intended shape as the screen size changes */
+    padding-bottom: 60%; 
+    position: relative; /* Essential for positioning the SVG and the labels */
+    margin: 0 auto;
+    max-width: 1200px; /* Optional: Limit the max size on huge screens */
+}
+
+/* --- SVG (The map lines) --- */
+.metro-map-svg {
+    position: absolute; /* Takes up the space defined by the padding-bottom trick */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling the lines */
+.line {
+    fill: none; /* Paths are lines, not shapes */
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.line-red { stroke: #d90000; }
+.line-blue { stroke: #007bff; }
+.line-yellow { stroke: #ffc107; }
+/* ... add other line colors */
+
+/* --- LABELS (Positioning over the map) --- */
+.map-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.landmark-label,
+.station-label {
+    position: absolute;
+    /* Use 'top' and 'left' based on the map's coordinate system (0-100%) */
+    /* Example: 'top: 15%; left: 15%;' from the HTML snippet */
+    transform: translate(-50%, -50%); /* Centers the label precisely on the coordinate */
+    white-space: nowrap; /* Prevents text wrap */
+}
+
+.landmark-label img {
+    max-width: 80px; /* Responsive image size */
+    height: auto;
+}
+
+.station-label {
+    font-size: 0.8em;
+    color: #555;
+    font-weight: bold;
+}
+
+/* --- MEDIA QUERIES (For finer control) --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2em;
+    }
+    
+    /* Adjust font size for smaller screens */
+    .station-label {
+        font-size: 0.7em;
+    }
+    
+    .landmark-label img {
+        max-width: 60px;
+    }
+}
+
+
+
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .header-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .image-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-image-wrapper {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .map-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center; /* Center the image */
+        }
+
+        .map-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .map-image-wrapper {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2em;
+            }
+            .header-subtitle {
+                font-size: 1em;
+            }
+            .image-section, .map-section {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 1.8em;
+            }
+            .header-subtitle {
+                font-size: 0.9em;
+            }
+            .image-section, .map-section {
+                padding: 10px;
+            }
+        }
+
+
+
+
+
+
+
+        
